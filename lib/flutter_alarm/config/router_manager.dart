@@ -1,0 +1,24 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_ui/flutter_alarm/pages/page1/page_1.dart';
+// import 'package:flutter_ui/flutter_alarm/pages/page2/page_2.dart';
+// import 'package:flutter_ui/flutter_alarm/pages/page3/page_3.dart';
+// import 'package:flutter_ui/flutter_alarm/pages/page4/page_4.dart';
+// import 'package:flutter_ui/flutter_alarm/pages/page5/page_5.dart';
+// import 'package:flutter_ui/flutter_alarm/pages/page6/page_6.dart';
+
+class RouterManager {
+  static List<Widget> _listPages = [
+    Page1(),
+    // Page2(),
+    // Page3(),
+    // Page4(),
+    // Page5(),
+    // Page6()
+  ];
+
+  static to(int index, BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => _listPages[index]));
+  }
+}
